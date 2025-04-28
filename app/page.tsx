@@ -1,10 +1,26 @@
 "use client";
 
+import "swiper/css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
+import { Product } from "./types";
+import ProductCard from "./components/ProductCard";
 import { TransparentOnNoHoverAppBarWithAnimation } from "./components/SemitransparentAppBar";
 import styles from "./page.module.css";
 
 export default function ProductPage() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Failed to load products", error));
+  }, []);
+
   return (
     <div>
       <TransparentOnNoHoverAppBarWithAnimation></TransparentOnNoHoverAppBarWithAnimation>
@@ -20,11 +36,29 @@ export default function ProductPage() {
           src="/images/kitty.jpg"
           alt="Kitty pic"
           fill
-          style={{ objectFit: "cover" }}
+          style={{
+            objectFit: "cover",
+            display: "flex",
+            justifyContent: "center",
+          }}
           priority
         />
       </div>
-      <div className={styles.productPage}></div>
+      <div className={styles.productPage}>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={3}
+          loop={true}
+          centeredSlides={false}
+          style={{ width: "90%" }}
+        >
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
+              <ProductCard key={product.id} product={product}></ProductCard>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }

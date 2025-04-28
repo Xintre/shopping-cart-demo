@@ -73,7 +73,7 @@ export function TransparentOnNoHoverAppBarWithAnimation() {
           <Button
             sx={{ color: Colors.BLACK, fontFamily: "var(--font-playfair)" }}
           >
-            Login
+            Chart
           </Button>
         </Toolbar>
       </AppBar>

@@ -1,12 +1,7 @@
-/* .productPage {
-  /* display: flex; */
-/* align-items: center; */
-/* padding: 80px; */
-/* font-family: var(--font-playfair);
-} */
-
 .productPage {
   font-family: var(--inconsolata);
+  padding-bottom: 3rem;
+  background-color: #f0e5d6;
 }
 
 .h1,
