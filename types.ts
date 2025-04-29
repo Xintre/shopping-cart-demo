@@ -8,7 +8,7 @@ export type Product = {
   images: string[];
 };
 
-export type ProductInCartType = Pick<Product, "id" | "price" | "name"> & {
+export type ProductInCart = Pick<Product, "id" | "price" | "name"> & {
   color: string;
   size: string;
   amount: number;

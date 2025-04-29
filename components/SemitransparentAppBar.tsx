@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import AppBar from "@mui/material/AppBar";
 import { BackButton } from "./BackButton";
@@ -23,6 +23,11 @@ export function TransparentOnNoHoverAppBarWithAnimation() {
 
   const [hovered, setHovered] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const cartSize = useMemo(
+    () => cart.reduce((previous, current) => previous + current.amount, 0),
+    [cart]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +80,7 @@ export function TransparentOnNoHoverAppBarWithAnimation() {
               routerPush("/cart");
             }}
             startIcon={
-              <Badge badgeContent={String(cart.length)} color="secondary">
+              <Badge badgeContent={String(cartSize)} color="secondary">
                 <ShoppingCart />
               </Badge>
             }

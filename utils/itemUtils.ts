@@ -1,8 +1,8 @@
-import { Product, ProductInCartType } from "../types";
+import { Product, ProductInCart } from "../types";
 
 export function areItemsEqual(
-  a: ProductInCartType | Product,
-  b: ProductInCartType | Product
+  a: ProductInCart | Product,
+  b: ProductInCart | Product
 ): boolean {
   return (
     a.id === b.id &&

@@ -186,7 +186,11 @@ export default function ProductCard({ product, banner }: ProductCardProps) {
           <IconButton
             color="secondary"
             onClick={() => {
-              addToCart(product);
+              addToCart({
+                product,
+                selectedColor: selectedColor.id,
+                selectedSize,
+              });
             }}
           >
             <AddShoppingCartIcon />
