@@ -2,6 +2,7 @@ import "./globals.css";
 
 import { Inconsolata, Playfair_Display } from "next/font/google";
 
+import { AppThemeProvider } from "@/components/AppThemeProvider";
 import type { Metadata } from "next";
 
 const inconsolata = Inconsolata({
@@ -31,7 +32,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfairDisplay.variable} ${inconsolata.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <AppThemeProvider>{children}</AppThemeProvider>
+      </body>
     </html>
   );
 }

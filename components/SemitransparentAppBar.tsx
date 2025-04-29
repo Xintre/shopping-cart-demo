@@ -5,15 +5,22 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 
 import AppBar from "@mui/material/AppBar";
+import { BackButton } from "./BackButton";
+import { Badge } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { Colors } from "../styles/colors";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import { ShoppingCart } from "@mui/icons-material";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { useCartStore } from "@/store/CartStore";
+import { useRouter } from "next/navigation";
 
 export function TransparentOnNoHoverAppBarWithAnimation() {
+  const { push: routerPush } = useRouter();
+
+  const { cart } = useCartStore();
+
   const [hovered, setHovered] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -46,23 +53,15 @@ export function TransparentOnNoHoverAppBarWithAnimation() {
             backgroundColor: hovered ? Colors.WHITE : "transparent",
           }}
         >
-          <IconButton
-            size="large"
-            edge="start"
-            aria-label="menu"
-            sx={{ mr: 2, color: Colors.BLACK }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <BackButton />
           <Typography
-            variant="h6"
+            variant="h3"
             component="div"
             sx={{
               position: "absolute",
               top: scrolled ? "10%" : "100%",
               left: "50%",
               transform: "translateX(-50%)",
-              fontFamily: "var(--font-playfair)",
               fontSize: scrolled ? "1.5rem" : "6rem",
               transition: "all 0.5s ease",
             }}
@@ -71,9 +70,17 @@ export function TransparentOnNoHoverAppBarWithAnimation() {
             Zoowood
           </Typography>
           <Button
-            sx={{ color: Colors.BLACK, fontFamily: "var(--font-playfair)" }}
+            sx={{ color: Colors.BLACK }}
+            onClick={() => {
+              routerPush("/cart");
+            }}
+            startIcon={
+              <Badge badgeContent={String(cart.length)} color="secondary">
+                <ShoppingCart />
+              </Badge>
+            }
           >
-            Chart
+            Cart
           </Button>
         </Toolbar>
       </AppBar>
