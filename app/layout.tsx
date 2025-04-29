@@ -1,44 +1,44 @@
-import "./globals.css";
+import './globals.css';
 
-import { Inconsolata, Playfair_Display } from "next/font/google";
+import { Inconsolata, Playfair_Display } from 'next/font/google';
 
-import { AppThemeProvider } from "@/components/AppThemeProvider";
-import type { Metadata } from "next";
-import { TransparentOnNoHoverAppBarWithAnimation } from "@/components/TransparentOnNoHoverAppBarWithAnimation";
+import { AppThemeProvider } from '@/components/AppThemeProvider';
+import type { Metadata } from 'next';
+import { TransparentOnNoHoverAppBarWithAnimation } from '@/components/TransparentOnNoHoverAppBarWithAnimation';
 
 const inconsolata = Inconsolata({
-  variable: "--font-inconsolata",
-  subsets: ["latin"],
+	variable: '--font-inconsolata',
+	subsets: ['latin'],
 });
 
 export const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-playfair",
-  display: "swap",
+	subsets: ['latin'],
+	weight: ['400', '600', '700'],
+	variable: '--font-playfair',
+	display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Zoowood",
-  description: "Zoowood! Wooden accessories for pets",
+	title: 'Zoowood',
+	description: 'Zoowood! Wooden accessories for pets',
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${playfairDisplay.variable} ${inconsolata.variable}`}
-    >
-      <body>
-        <AppThemeProvider>
-          <TransparentOnNoHoverAppBarWithAnimation />
-          {children}
-        </AppThemeProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html
+			lang="en"
+			className={`${playfairDisplay.variable} ${inconsolata.variable}`}
+		>
+			<body>
+				<AppThemeProvider>
+					<TransparentOnNoHoverAppBarWithAnimation />
+					{children}
+				</AppThemeProvider>
+			</body>
+		</html>
+	);
 }

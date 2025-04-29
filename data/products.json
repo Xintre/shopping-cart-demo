@@ -1,156 +1,156 @@
 [
-  {
-    "id": "domek-001",
-    "name": "Small Animal House",
-    "description": "A cozy house suitable for guinea pigs, rabbits, ferrets, hedgehogs, and chinchillas.",
-    "price": 119.0,
-    "availableSizes": ["S", "M", "L"],
-    "colors": [
-      {
-        "id": "gray",
-        "name": "Gray",
-        "image": "https://placehold.co/100x100/cccccc/ffffff?text=Gray"
-      },
-      {
-        "id": "green",
-        "name": "Green",
-        "image": "https://placehold.co/100x100/00ff00/ffffff?text=Green"
-      },
-      {
-        "id": "black",
-        "name": "Black",
-        "image": "https://placehold.co/100x100/000000/ffffff?text=Black"
-      }
-    ],
-    "images": [
-      "https://placehold.co/600x400/cccccc/ffffff?text=Image+1",
-      "https://placehold.co/600x400/999999/ffffff?text=Image+2",
-      "https://placehold.co/600x400/666666/ffffff?text=Image+3"
-    ]
-  },
-  {
-    "id": "domek-002",
-    "name": "Luxury Animal Mansion",
-    "description": "A spacious and luxurious house designed for larger pets such as rabbits, ferrets, and guinea pigs.",
-    "price": 229.0,
-    "availableSizes": ["M", "L"],
-    "colors": [
-      {
-        "id": "white",
-        "name": "White",
-        "image": "https://placehold.co/100x100/ffffff/000000?text=White"
-      },
-      {
-        "id": "blue",
-        "name": "Blue",
-        "image": "https://placehold.co/100x100/0000ff/ffffff?text=Blue"
-      }
-    ],
-    "images": [
-      "https://placehold.co/600x400/ffffff/000000?text=Image+1",
-      "https://placehold.co/600x400/0000ff/ffffff?text=Image+2",
-      "https://placehold.co/600x400/cccccc/ffffff?text=Image+3"
-    ]
-  },
-  {
-    "id": "domek-003",
-    "name": "Classic Wooden Cottage",
-    "description": "A wooden cottage perfect for small pets looking for a natural environment.",
-    "price": 149.0,
-    "availableSizes": ["S", "M"],
-    "colors": [
-      {
-        "id": "brown",
-        "name": "Brown",
-        "image": "https://placehold.co/100x100/a52a2a/ffffff?text=Brown"
-      },
-      {
-        "id": "beige",
-        "name": "Beige",
-        "image": "https://placehold.co/100x100/f5f5dc/000000?text=Beige"
-      }
-    ],
-    "images": [
-      "https://placehold.co/600x400/a52a2a/ffffff?text=Image+1",
-      "https://placehold.co/600x400/f5f5dc/000000?text=Image+2",
-      "https://placehold.co/600x400/cccccc/ffffff?text=Image+3"
-    ]
-  },
-  {
-    "id": "domek-004",
-    "name": "Pet Paradise",
-    "description": "A multi-level mansion with plenty of space and entertainment for your furry friends.",
-    "price": 349.0,
-    "availableSizes": ["L"],
-    "colors": [
-      {
-        "id": "pink",
-        "name": "Pink",
-        "image": "https://placehold.co/100x100/ff69b4/ffffff?text=Pink"
-      },
-      {
-        "id": "purple",
-        "name": "Purple",
-        "image": "https://placehold.co/100x100/800080/ffffff?text=Purple"
-      }
-    ],
-    "images": [
-      "https://placehold.co/600x400/ff69b4/ffffff?text=Image+1",
-      "https://placehold.co/600x400/800080/ffffff?text=Image+2",
-      "https://placehold.co/600x400/999999/ffffff?text=Image+3"
-    ]
-  },
-  {
-    "id": "domek-005",
-    "name": "Rustic Retreat",
-    "description": "A cozy retreat for your smaller pets, featuring a rustic design with natural materials.",
-    "price": 109.0,
-    "availableSizes": ["S"],
-    "colors": [
-      {
-        "id": "red",
-        "name": "Red",
-        "image": "https://placehold.co/100x100/d32f2f/ffffff?text=Red"
-      },
-      {
-        "id": "yellow",
-        "name": "Yellow",
-        "image": "https://placehold.co/100x100/ffeb3b/000000?text=Yellow"
-      }
-    ],
-    "images": [
-      "https://placehold.co/600x400/d32f2f/ffffff?text=Image+1",
-      "https://placehold.co/600x400/ffeb3b/000000?text=Image+2",
-      "https://placehold.co/600x400/cccccc/ffffff?text=Image+3"
-    ]
-  },
-  {
-    "id": "domek-006",
-    "name": "Modern Pet House",
-    "description": "A stylish, modern pet house with sleek design and ample space for small animals. Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum.",
-    "price": 189.0,
-    "availableSizes": ["M", "L"],
-    "colors": [
-      {
-        "id": "black",
-        "name": "Black",
-        "image": "https://placehold.co/100x100/000000/ffffff?text=Black"
-      },
-      {
-        "id": "gray",
-        "name": "Gray",
-        "image": "https://placehold.co/100x100/cccccc/ffffff?text=Gray"
-      },
-      {
-        "id": "white",
-        "name": "White",
-        "image": "https://placehold.co/100x100/ffffff/000000?text=White"
-      }
-    ],
-    "images": [
-      "https://placehold.co/600x400/000000/ffffff?text=Image+1",
-      "https://placehold.co/600x400/cccccc/ffffff?text=Image+2",
-      "https://placehold.co/600x400/ffffff/000000?text=Image+3"
-    ]
-  }
+	{
+		"id": "domek-001",
+		"name": "Small Animal House",
+		"description": "A cozy house suitable for guinea pigs, rabbits, ferrets, hedgehogs, and chinchillas.",
+		"price": 119.0,
+		"availableSizes": ["S", "M", "L"],
+		"colors": [
+			{
+				"id": "gray",
+				"name": "Gray",
+				"image": "https://placehold.co/100x100/cccccc/ffffff?text=Gray"
+			},
+			{
+				"id": "green",
+				"name": "Green",
+				"image": "https://placehold.co/100x100/00ff00/ffffff?text=Green"
+			},
+			{
+				"id": "black",
+				"name": "Black",
+				"image": "https://placehold.co/100x100/000000/ffffff?text=Black"
+			}
+		],
+		"images": [
+			"https://placehold.co/600x400/cccccc/ffffff?text=Image+1",
+			"https://placehold.co/600x400/999999/ffffff?text=Image+2",
+			"https://placehold.co/600x400/666666/ffffff?text=Image+3"
+		]
+	},
+	{
+		"id": "domek-002",
+		"name": "Luxury Animal Mansion",
+		"description": "A spacious and luxurious house designed for larger pets such as rabbits, ferrets, and guinea pigs.",
+		"price": 229.0,
+		"availableSizes": ["M", "L"],
+		"colors": [
+			{
+				"id": "white",
+				"name": "White",
+				"image": "https://placehold.co/100x100/ffffff/000000?text=White"
+			},
+			{
+				"id": "blue",
+				"name": "Blue",
+				"image": "https://placehold.co/100x100/0000ff/ffffff?text=Blue"
+			}
+		],
+		"images": [
+			"https://placehold.co/600x400/ffffff/000000?text=Image+1",
+			"https://placehold.co/600x400/0000ff/ffffff?text=Image+2",
+			"https://placehold.co/600x400/cccccc/ffffff?text=Image+3"
+		]
+	},
+	{
+		"id": "domek-003",
+		"name": "Classic Wooden Cottage",
+		"description": "A wooden cottage perfect for small pets looking for a natural environment.",
+		"price": 149.0,
+		"availableSizes": ["S", "M"],
+		"colors": [
+			{
+				"id": "brown",
+				"name": "Brown",
+				"image": "https://placehold.co/100x100/a52a2a/ffffff?text=Brown"
+			},
+			{
+				"id": "beige",
+				"name": "Beige",
+				"image": "https://placehold.co/100x100/f5f5dc/000000?text=Beige"
+			}
+		],
+		"images": [
+			"https://placehold.co/600x400/a52a2a/ffffff?text=Image+1",
+			"https://placehold.co/600x400/f5f5dc/000000?text=Image+2",
+			"https://placehold.co/600x400/cccccc/ffffff?text=Image+3"
+		]
+	},
+	{
+		"id": "domek-004",
+		"name": "Pet Paradise",
+		"description": "A multi-level mansion with plenty of space and entertainment for your furry friends.",
+		"price": 349.0,
+		"availableSizes": ["L"],
+		"colors": [
+			{
+				"id": "pink",
+				"name": "Pink",
+				"image": "https://placehold.co/100x100/ff69b4/ffffff?text=Pink"
+			},
+			{
+				"id": "purple",
+				"name": "Purple",
+				"image": "https://placehold.co/100x100/800080/ffffff?text=Purple"
+			}
+		],
+		"images": [
+			"https://placehold.co/600x400/ff69b4/ffffff?text=Image+1",
+			"https://placehold.co/600x400/800080/ffffff?text=Image+2",
+			"https://placehold.co/600x400/999999/ffffff?text=Image+3"
+		]
+	},
+	{
+		"id": "domek-005",
+		"name": "Rustic Retreat",
+		"description": "A cozy retreat for your smaller pets, featuring a rustic design with natural materials.",
+		"price": 109.0,
+		"availableSizes": ["S"],
+		"colors": [
+			{
+				"id": "red",
+				"name": "Red",
+				"image": "https://placehold.co/100x100/d32f2f/ffffff?text=Red"
+			},
+			{
+				"id": "yellow",
+				"name": "Yellow",
+				"image": "https://placehold.co/100x100/ffeb3b/000000?text=Yellow"
+			}
+		],
+		"images": [
+			"https://placehold.co/600x400/d32f2f/ffffff?text=Image+1",
+			"https://placehold.co/600x400/ffeb3b/000000?text=Image+2",
+			"https://placehold.co/600x400/cccccc/ffffff?text=Image+3"
+		]
+	},
+	{
+		"id": "domek-006",
+		"name": "Modern Pet House",
+		"description": "A stylish, modern pet house with sleek design and ample space for small animals. Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum.",
+		"price": 189.0,
+		"availableSizes": ["M", "L"],
+		"colors": [
+			{
+				"id": "black",
+				"name": "Black",
+				"image": "https://placehold.co/100x100/000000/ffffff?text=Black"
+			},
+			{
+				"id": "gray",
+				"name": "Gray",
+				"image": "https://placehold.co/100x100/cccccc/ffffff?text=Gray"
+			},
+			{
+				"id": "white",
+				"name": "White",
+				"image": "https://placehold.co/100x100/ffffff/000000?text=White"
+			}
+		],
+		"images": [
+			"https://placehold.co/600x400/000000/ffffff?text=Image+1",
+			"https://placehold.co/600x400/cccccc/ffffff?text=Image+2",
+			"https://placehold.co/600x400/ffffff/000000?text=Image+3"
+		]
+	}
 ]

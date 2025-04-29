@@ -1,94 +1,97 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from 'react';
 
-import AppBar from "@mui/material/AppBar";
-import { BackButton } from "./BackButton";
-import { Badge } from "@mui/material";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { Colors } from "../styles/colors";
-import { ShoppingCart } from "@mui/icons-material";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { useCartStore } from "@/store/CartStore";
-import { useRouter } from "next/navigation";
+import AppBar from '@mui/material/AppBar';
+import { BackButton } from './BackButton';
+import { Badge } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { Colors } from '../styles/colors';
+import { ShoppingCart } from '@mui/icons-material';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import { useCartStore } from '@/store/CartStore';
+import { useRouter } from 'next/navigation';
 
 export function TransparentOnNoHoverAppBarWithAnimation() {
-  const { push: routerPush } = useRouter();
+	const { push: routerPush } = useRouter();
 
-  const { cart } = useCartStore();
+	const { cart } = useCartStore();
 
-  const [hovered, setHovered] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+	const [hovered, setHovered] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 
-  const cartSize = useMemo(
-    () => cart.reduce((previous, current) => previous + current.amount, 0),
-    [cart]
-  );
+	const cartSize = useMemo(
+		() => cart.reduce((previous, current) => previous + current.amount, 0),
+		[cart]
+	);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // we want to listen for scroll only on-mount
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 50) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []); // we want to listen for scroll only on-mount
 
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="fixed"
-        style={{ background: "transparent", boxShadow: "none" }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        <Toolbar
-          variant="dense"
-          sx={{
-            justifyContent: "space-between",
-            backgroundColor: hovered ? Colors.WHITE : "transparent",
-          }}
-        >
-          <BackButton />
-          <Typography
-            variant="h3"
-            component="div"
-            sx={{
-              position: "absolute",
-              top: scrolled ? "10%" : "100%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              fontSize: scrolled ? "1.5rem" : "6rem",
-              transition: "all 0.5s ease",
-            }}
-            color={Colors.BLACK}
-          >
-            Zoowood
-          </Typography>
-          <Button
-            sx={{ color: Colors.BLACK }}
-            onClick={() => {
-              routerPush("/cart");
-            }}
-            startIcon={
-              <Badge badgeContent={String(cartSize)} color="secondary">
-                <ShoppingCart />
-              </Badge>
-            }
-          >
-            Cart
-          </Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
+	return (
+		<Box sx={{ flexGrow: 1 }}>
+			<AppBar
+				position="fixed"
+				style={{ background: 'transparent', boxShadow: 'none' }}
+				onMouseEnter={() => setHovered(true)}
+				onMouseLeave={() => setHovered(false)}
+			>
+				<Toolbar
+					variant="dense"
+					sx={{
+						justifyContent: 'space-between',
+						backgroundColor: hovered ? Colors.WHITE : 'transparent',
+					}}
+				>
+					<BackButton />
+					<Typography
+						variant="h3"
+						component="div"
+						sx={{
+							position: 'absolute',
+							top: scrolled ? '10%' : '100%',
+							left: '50%',
+							transform: 'translateX(-50%)',
+							fontSize: scrolled ? '1.5rem' : '6rem',
+							transition: 'all 0.5s ease',
+						}}
+						color={Colors.BLACK}
+					>
+						Zoowood
+					</Typography>
+					<Button
+						sx={{ color: Colors.BLACK }}
+						onClick={() => {
+							routerPush('/cart');
+						}}
+						startIcon={
+							<Badge
+								badgeContent={String(cartSize)}
+								color="secondary"
+							>
+								<ShoppingCart />
+							</Badge>
+						}
+					>
+						Cart
+					</Button>
+				</Toolbar>
+			</AppBar>
+		</Box>
+	);
 }
