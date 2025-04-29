@@ -13,6 +13,7 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
+import { Product, ProductColor } from "@/types";
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Card from "@mui/material/Card";
@@ -20,7 +21,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { OpenInBrowser } from "@mui/icons-material";
-import { Product } from "@/types";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 import Typography from "@mui/material/Typography";
@@ -34,11 +34,11 @@ type ProductCardProps = {
 
 export default function ProductCard({ product, banner }: ProductCardProps) {
   const { addToCart } = useCartStore();
-  const [selectedColor, setSelectedColor] = useState<Product["colors"][0]>(
+  const [selectedColor, setSelectedColor] = useState<ProductColor>(
     product.colors[0]
   );
   const [selectedSize, setSelectedSize] = useState<
-    Product["availableSizes"][0]
+    Product["availableSizes"][number]
   >(product.availableSizes[0]);
 
   return (
@@ -188,7 +188,7 @@ export default function ProductCard({ product, banner }: ProductCardProps) {
             onClick={() => {
               addToCart({
                 product,
-                selectedColor: selectedColor.id,
+                selectedColor,
                 selectedSize,
               });
             }}

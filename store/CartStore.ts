@@ -1,4 +1,4 @@
-import { Product, ProductInCart } from "@/types";
+import { Product, ProductColor, ProductInCart } from "@/types";
 
 import { areItemsEqual } from "@/utils/itemUtils";
 import { create } from "zustand";
@@ -12,7 +12,7 @@ export type CartStoreType = {
     selectedSize,
   }: {
     product: Product;
-    selectedColor: string;
+    selectedColor: ProductColor;
     selectedSize: string;
   }) => void;
   removeFromCart: (item: ProductInCart) => void;
@@ -31,7 +31,7 @@ export const useCartStore = create<CartStoreType>()(
           amount: 1,
         };
         const itemIfFound = state.cart.find((item) =>
-          areItemsEqual(item, product)
+          areItemsEqual(item, productInCart)
         );
         if (itemIfFound) {
           itemIfFound.amount += productInCart.amount;
@@ -41,8 +41,8 @@ export const useCartStore = create<CartStoreType>()(
       }),
     removeFromCart: (itemToRemove) =>
       set((state) => {
-        state.cart = state.cart.filter((item) =>
-          areItemsEqual(item, itemToRemove)
+        state.cart = state.cart.filter(
+          (item) => !areItemsEqual(item, itemToRemove)
         );
       }),
     decrementInCart: (itemToDecrement) =>

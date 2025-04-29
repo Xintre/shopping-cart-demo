@@ -6,7 +6,7 @@ export function areItemsEqual(
 ): boolean {
   return (
     a.id === b.id &&
-    ("color" in a && "color" in b ? a.color === b.color : true) &&
+    ("color" in a && "color" in b ? a.color.id === b.color.id : true) &&
     ("size" in a && "size" in b ? a.size === b.size : true)
   );
 }

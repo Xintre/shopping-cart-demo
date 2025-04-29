@@ -2,6 +2,7 @@
 
 import "swiper/css";
 
+import { Container, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 
@@ -9,8 +10,6 @@ import Image from "next/image";
 import { Masonry } from "@mui/lab";
 import { Product } from "../types";
 import ProductCard from "../components/ProductCard";
-import { TransparentOnNoHoverAppBarWithAnimation } from "../components/SemitransparentAppBar";
-import { Typography } from "@mui/material";
 import _ from "lodash";
 import styles from "./page.module.css";
 
@@ -26,7 +25,6 @@ export default function ProductPage() {
 
   return (
     <div>
-      <TransparentOnNoHoverAppBarWithAnimation></TransparentOnNoHoverAppBarWithAnimation>
       <div
         style={{
           position: "relative",
@@ -75,11 +73,13 @@ export default function ProductPage() {
         >
           All products
         </Typography>
-        <Masonry columns={3} spacing={2} sx={{ padding: 1 }}>
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </Masonry>
+        <Container maxWidth="xl">
+          <Masonry columns={3} spacing={2}>
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </Masonry>
+        </Container>
       </div>
     </div>
   );

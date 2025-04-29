@@ -4,6 +4,7 @@ import { Inconsolata, Playfair_Display } from "next/font/google";
 
 import { AppThemeProvider } from "@/components/AppThemeProvider";
 import type { Metadata } from "next";
+import { TransparentOnNoHoverAppBarWithAnimation } from "@/components/TransparentOnNoHoverAppBarWithAnimation";
 
 const inconsolata = Inconsolata({
   variable: "--font-inconsolata",
@@ -33,7 +34,10 @@ export default function RootLayout({
       className={`${playfairDisplay.variable} ${inconsolata.variable}`}
     >
       <body>
-        <AppThemeProvider>{children}</AppThemeProvider>
+        <AppThemeProvider>
+          <TransparentOnNoHoverAppBarWithAnimation />
+          {children}
+        </AppThemeProvider>
       </body>
     </html>
   );
