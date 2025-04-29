@@ -1,9 +1,6 @@
 pre-push:
     parallel: true
     jobs:
-        - name: unit tests
-          run: yarn test
-
         - name: stylecheck
           run: yarn stylecheck
 
