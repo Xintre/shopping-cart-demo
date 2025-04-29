@@ -1,37 +1,41 @@
 {
-  "name": "product-page",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^7.0.2",
-    "@mui/lab": "^7.0.0-beta.11",
-    "@mui/material": "^7.0.2",
-    "@mui/x-data-grid": "^8.1.0",
-    "immer": "^10.1.1",
-    "lodash": "^4.17.21",
-    "next": "15.3.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "swiper": "^11.2.6",
-    "zustand": "^5.0.3"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/lodash": "^4.17.16",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.1",
-    "typescript": "^5"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+	"name": "product-page",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"prepare": "lefthook install",
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"stylecheck": "prettier --check ."
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@mui/icons-material": "^7.0.2",
+		"@mui/lab": "^7.0.0-beta.11",
+		"@mui/material": "^7.0.2",
+		"@mui/x-data-grid": "^8.1.0",
+		"immer": "^10.1.1",
+		"lodash": "^4.17.21",
+		"next": "15.3.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"swiper": "^11.2.6",
+		"zustand": "^5.0.3"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@types/lodash": "^4.17.16",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.3.1",
+		"lefthook": "^1.11.12",
+		"prettier": "^3.5.3",
+		"typescript": "^5"
+	},
+	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
