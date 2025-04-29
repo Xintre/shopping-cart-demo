@@ -121,6 +121,16 @@ export default function ProductCard({ product, banner }: ProductCardProps) {
                 Color
               </InputLabel>
               <Select
+                startAdornment={
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={selectedColor.image}
+                    alt={selectedColor.name}
+                    width={15}
+                    height={15}
+                    style={{ marginRight: 6 }}
+                  />
+                }
                 labelId="color-selector-label"
                 id="color-selector"
                 value={selectedColor.id}
